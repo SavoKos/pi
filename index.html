@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>PI Decimale</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Pi Decimale</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Početna</a></li>
+          <li><a href="leaderboard.html">Rang lista</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <div class="container">
+        <h1>PI Decimale:</h1>
+        <form id="pi-form">
+          <input type="text" id="username-input" required placeholder="Ime" />
+          <input type="text" id="pi-input" placeholder="Unesi PI decimale" />
+          <button type="submit" id="pi-submit">Potvrdi</button>
+        </form>
+        <p id="pi-error" class="error"></p>
+        <p id="pi-highscore" class="highscore"></p>
+        <p id="pi-count">Broj decimala: 0</p>
+        <p id="pi-decimals">Decimale:</p>
+      </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
