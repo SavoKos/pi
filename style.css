@@ -19,6 +19,7 @@ h2 {
   font-weight: 400;
   margin-top: 0;
   margin-bottom: 1rem;
+  color: #000;
 }
 
 ul {
@@ -65,7 +66,8 @@ a {
   margin-bottom: 1rem;
 }
 
-.highscore {
+.highscore,
+#pi-username {
   margin-top: 0;
   margin-bottom: 1rem;
   font-size: 1.2rem;
@@ -216,4 +218,8 @@ nav ul li a {
 
 nav ul li a:hover {
   color: #4caf50;
+}
+
+.pdf {
+  margin-top: 1rem;
 }

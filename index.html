@@ -6,7 +6,7 @@
   </head>
   <body>
     <header>
-      <h1>Pi Decimale</h1>
+      <h1>PI decimale</h1>
       <nav>
         <ul>
           <li><a href="index.html">Početna</a></li>
@@ -16,16 +16,27 @@
     </header>
     <main>
       <div class="container">
-        <h1>PI Decimale:</h1>
         <form id="pi-form">
-          <input type="text" id="username-input" required placeholder="Ime" />
-          <input type="text" id="pi-input" placeholder="Unesi PI decimale" />
+          <input
+            type="text"
+            id="username-input"
+            required
+            placeholder="Ime"
+            autocomplete="off"
+          />
+          <input
+            type="text"
+            id="pi-input"
+            placeholder="Unesi PI decimale"
+            autocomplete="off"
+          />
           <button type="submit" id="pi-submit">Potvrdi</button>
         </form>
         <p id="pi-error" class="error"></p>
+        <p id="pi-username"></p>
         <p id="pi-highscore" class="highscore"></p>
-        <p id="pi-count">Broj decimala: 0</p>
-        <textarea id="pi-decimals" disabled rows="20">Decimale:</textarea>
+        <p id="pi-count"></p>
+        <textarea id="pi-decimals" disabled rows="20"></textarea>
       </div>
     </main>
     <script src="script.js"></script>

@@ -1,5 +1,4 @@
 const leaderboardTableBody = document.querySelector('#leaderboard-table-body');
-
 const userDataArray = [];
 for (let i = 0; i < localStorage.length; i++) {
   const key = localStorage.key(i);
@@ -23,3 +22,20 @@ for (let i = 0; i < userDataArray.length; i++) {
   row.appendChild(countCell);
   leaderboardTableBody.appendChild(row);
 }
+
+window.jsPDF = window.jspdf.jsPDF;
+var docPDF = new jsPDF();
+function print() {
+  var elementHTML = document.querySelector('table');
+  docPDF.html(elementHTML, {
+    callback: function (docPDF) {
+      docPDF.save('PI Takmicenje - Rang lista');
+    },
+    x: 15,
+    y: 15,
+    width: 170,
+    windowWidth: 650,
+  });
+}
+
+document.querySelector('button').addEventListener('click', print);

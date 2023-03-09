@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <title>PI Decimale - Rang Lista</title>
     <link rel="stylesheet" href="style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
   </head>
   <body>
     <header>
@@ -11,7 +13,7 @@
       <nav>
         <ul>
           <li><a href="index.html">Početna</a></li>
-          <li><a href="leaderboard.html">Rang Lista</a></li>
+          <li><a href="ranglista.html">Rang Lista</a></li>
         </ul>
       </nav>
     </header>
@@ -27,6 +29,7 @@
         </thead>
         <tbody id="leaderboard-table-body"></tbody>
       </table>
+      <button class="pdf">Generiši PDF</button>
     </main>
     <script src="ranglista.js"></script>
   </body>
