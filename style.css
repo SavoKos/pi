@@ -49,9 +49,8 @@ a {
 .container p,
 .container textarea {
   font-size: 30px;
-  color: #fff;
+  color: rgb(0 56 157);
   font-weight: 600;
-  filter: drop-shadow(2px 0px 6px rgba(0, 0, 0, 0.9));
 }
 
 #pi-form {
