@@ -14,6 +14,15 @@ piForm.addEventListener('submit', (e) => {
   const piDecimals = document.getElementById('pi-decimals');
   const usernameInput = document.getElementById('username-input');
 
+  const resetValues = () => {
+    piInput.value = '';
+    usernameInput.value = '';
+    piUsername.textContent = '';
+    piDecimals.textContent = '';
+    piCount.textContent = '';
+    piHighscore.textContent = '';
+  };
+
   let enteredDecimals = '';
   let username = usernameInput.value;
 
@@ -22,14 +31,20 @@ piForm.addEventListener('submit', (e) => {
   const inputUsername = usernameInput.value.trim();
   const inputDecimal = piInput.value.trim();
 
-  if (!inputUsername || !inputDecimal)
+  if (!inputUsername || !inputDecimal) {
+    resetValues();
     return (piError.textContent = 'Unesite ime i decimale!');
+  }
 
-  if (!/^\d+$/.test(inputDecimal))
+  if (!/^\d+$/.test(inputDecimal)) {
+    resetValues();
     return (piError.textContent = 'Moguće je unositi samo brojeve!');
+  }
 
-  if (inputDecimal.length > 700)
+  if (inputDecimal.length > 700) {
+    resetValues();
     return (piError.textContent = 'Moguće je unijeti maksimalno 700 decimala!');
+  }
 
   for (let i = 0; i < inputDecimal.length; i++) {
     console.log(PI[i] === inputDecimal[i]);
